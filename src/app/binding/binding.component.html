@@ -1,0 +1,32 @@
+<h1 [innerHTML]="today"></h1>
+<h1>{{today}}</h1>
+
+
+<!-- attribute binding -->
+
+<input type="text" [attr.value]="today" /> 
+<p></p>
+<input type="text" value="today" />
+
+<p></p>
+<input type="checkbox" [checked]="isMarried" />Married 
+<!--Checked is a property, not an attribute and so [attr.checked]="isMarried" will not work-->
+
+<p></p>
+<input type="checkbox" #banner (click)="null" />Show Banner 
+<div [class.banner]="banner.checked">Lucine's App</div>
+
+
+<p></p>
+<div [style.color]="red">This text is not bound to a style because Angular reads "red" as an expression, not as a constant for the color red.</div>
+<p></p>
+<div [style.color]="'red'">This text is bound to a style because Angular reads 'red' (in single quotes) as an constant that is given within an expression notated by double quotes ("").</div>
+<p></p>
+<div [style.color]="banner.checked ? 'blue':'violet'">This text is also bound to a style AND changes color based on whether "Show Banner" is checked or not.</div>
+<p></p>
+<div (mouseover)="showMouse($event)">
+    This is a simple DIV
+    <p></p>
+    This is the second line.
+
+</div>

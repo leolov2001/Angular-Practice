@@ -1,0 +1,19 @@
+<h1>Contacts</h1>
+
+Name <br>
+<input type="text" #name/>
+<p></p>
+Mobile<br>
+<input type="number" #mobile/>
+<p></p>
+<button (click)="addPerson(name.value,mobile.value)">Add</button> {{validationMessage}}
+<p></p>
+<table *ngIf="persons.length >0" width="100%" border="1">
+    <tr><th>Name</th><th>Mobile</th><th>Actions</th></tr>
+    <tr *ngFor="let p of persons; let i = index">
+        <td>{{p.name}}</td>
+        <td>{{p.mobile}}</td>
+        <td style="text-align: center">
+            <button (click)="deletePerson(i)">Delete</button></td>
+    </tr>
+</table>
