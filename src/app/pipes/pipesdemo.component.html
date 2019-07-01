@@ -3,11 +3,11 @@
         <p></p>
         {{ today  | date : 'dd-MM-y'}}
         <p></p>
-        {{ amount | currency : 'INR': true :'10.3-5' }}
+        {{ amount | currency : 'INR': true :'4.2-2' }}
         <p></p>
         {{ amount | currency  }}
         <p></p>
-        {{ amount | number : '8.2-2' }}
+        {{ amount | number : '8.3-5' }}
         <p></p>
         {{ 0.1254 | percent }}
         <p></p>
@@ -22,5 +22,11 @@
         {{ name | brackets : 'u' }}
         <p></p>
         {{ name | slice : 10 | brackets }}
+        <p>Exercise 7.2 / 7.3 / 7.4</p>
+        {{ name | spaces }}
+        <p></p>
+        {{ name | spaces : '*' }}
+        <p></p>
+        {{ name | spaces : '*' :2 }}
 
 </h1>
