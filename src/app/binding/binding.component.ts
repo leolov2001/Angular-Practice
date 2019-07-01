@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class BindingComponent implements OnInit {
   today: Date;
   isMarried: boolean = false;
+  
   constructor() {
     this.today = new Date();
   }
