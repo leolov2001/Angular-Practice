@@ -16,7 +16,7 @@ export class PersonsComponent implements OnInit {
   }
 
   addPerson(name: string, mobile: string) {
-    for(var p of this.persons){
+    for(let p of this.persons){
       if(p.name == name){
         this.validationMessage = "Name already exists in our system. Please Try Again!!"
         return;

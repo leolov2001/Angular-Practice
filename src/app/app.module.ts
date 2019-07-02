@@ -14,13 +14,15 @@ import { SpacesPipe } from './pipes/spaces.pipe';
   declarations: [
     PipesDemoComponent,
     BracketsPipe,
-    SpacesPipe
+    SpacesPipe,
+    HelloComponent,
+    PersonsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [PipesDemoComponent]
+  bootstrap: [PipesDemoComponent, HelloComponent, PersonsComponent]
 })
 export class AppModule { }
