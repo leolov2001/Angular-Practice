@@ -9,6 +9,8 @@ import { BindingComponent } from './binding/binding.component';
 import { PipesDemoComponent } from './pipes/pipesdemo.component';
 import { BracketsPipe } from './pipes/brackets.pipe';
 import { SpacesPipe } from './pipes/spaces.pipe';
+import { ProductsListComponent } from './icc/products-list.component';
+import { ProductDetailsComponent } from './icc/product-details.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,15 @@ import { SpacesPipe } from './pipes/spaces.pipe';
     SpacesPipe,
     HelloComponent,
     PersonsComponent
+    ProductsListComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [PipesDemoComponent, HelloComponent, PersonsComponent]
+  bootstrap: [PipesDemoComponent, HelloComponent, PersonsComponent,ProductsListComponent]
+
 })
 export class AppModule { }
