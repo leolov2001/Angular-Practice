@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,9 @@ import { BracketsPipe } from './pipes/brackets.pipe';
 import { SpacesPipe } from './pipes/spaces.pipe';
 import { ProductsListComponent } from './icc/products-list.component';
 import { ProductDetailsComponent } from './icc/product-details.component';
+import { UseStackComponent } from './services/usestack.component';
+import { StackComponent } from './services/stack.component';
+import { RegisterFormsComponent } from './register-forms/register-forms.component';
 
 @NgModule({
   declarations: [
@@ -18,16 +22,22 @@ import { ProductDetailsComponent } from './icc/product-details.component';
     BracketsPipe,
     SpacesPipe,
     HelloComponent,
-    PersonsComponent
+    PersonsComponent,
     ProductsListComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    UseStackComponent,
+    StackComponent,
+    RegisterFormsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
+  //Declaring a Service at module level
+  //providers:[StackService]
   providers: [],
-  bootstrap: [PipesDemoComponent, HelloComponent, PersonsComponent,ProductsListComponent]
+  bootstrap: [RegisterFormsComponent, StackComponent, UseStackComponent, HelloComponent, PersonsComponent,ProductsListComponent, PipesDemoComponent]
 
 })
 export class AppModule { }

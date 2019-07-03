@@ -3,7 +3,7 @@ import { StackService } from './stack.service';
 
 @Component({
     selector: 'st-stack',
-    templateUrl: './usestack.component.html',
+    templateUrl: './stack.component.html',
     providers : [StackService]
 })
 export class StackComponent  {

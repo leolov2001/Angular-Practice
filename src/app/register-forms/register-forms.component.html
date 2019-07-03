@@ -1,0 +1,30 @@
+<p>Template Driven Form</p>
+
+<form (ngSubmit)="register(regForm)" #regForm = "ngForm" novalidate>
+    Name: <input type="text" [(ngModel)]="uname" name="tname" required minlength="5" #username="ngModel" />
+    <!--Adding Validation and displaying its appropriate messages-->
+    <span *ngIf="username.dirty"> <!--This validation will only display any of the following msg once there is an initial change-->
+        <!--<span *ngIf="username.invalid">Missing Username</span>  This will be true/invalid if either required validation
+             is false or minlength validation is false. So, to give seperate/clear error reports- we use the following -->
+        <span *ngIf="username.errors?.required">Missing Username</span>
+        <span *ngIf="username.errors?.minlength">Minimum length should be 5</span>
+        <!--the '?' in 'errors?' is called NULL-SAFE OPERATOR. It means it will only check for the kind of error (whether 'required' or
+             'minlength' kind of error) if there is an error in the first place. If no error, it will skip checking for the 
+             kind of error.-->
+    </span>
+    <p></p>
+    Age: <input type="range" min="8" max="99" [(ngModel)]="uage" name="tage" required /> {{uage}}
+    <p></p>
+    <button [disabled]="regForm.invalid" >Register</button>
+</form>
+
+
+<h4>Data</h4>
+{{uname}}<br />
+{{uage}}
+
+<p>Name is Valid? <br /> {{username.valid}}</p>
+<p>Name is Dirty? <br /> {{username.dirty}}</p>
+<p>Form is Valid? <br /> {{regForm.valid}}</p>
+
+<p>Present Name Input field Error: <br /> {{username.errors | json}}</p>
