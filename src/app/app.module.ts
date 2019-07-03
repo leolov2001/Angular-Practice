@@ -9,18 +9,22 @@ import { BindingComponent } from './binding/binding.component';
 import { PipesDemoComponent } from './pipes/pipesdemo.component';
 import { BracketsPipe } from './pipes/brackets.pipe';
 import { SpacesPipe } from './pipes/spaces.pipe';
+import { ProductsListComponent } from './icc/products-list.component';
+import { ProductDetailsComponent } from './icc/product-details.component';
 
 @NgModule({
   declarations: [
     PipesDemoComponent,
     BracketsPipe,
-    SpacesPipe
+    SpacesPipe,
+    ProductsListComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [PipesDemoComponent]
+  bootstrap: [ProductsListComponent]
 })
 export class AppModule { }
