@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,7 @@ import { ProductDetailsComponent } from './icc/product-details.component';
 import { UseStackComponent } from './services/usestack.component';
 import { StackComponent } from './services/stack.component';
 import { RegisterFormsComponent } from './register-forms/register-forms.component';
+import { RLoginComponent } from './register-forms/rlogin.component';
 
 @NgModule({
   declarations: [
@@ -27,17 +28,19 @@ import { RegisterFormsComponent } from './register-forms/register-forms.componen
     ProductDetailsComponent,
     UseStackComponent,
     StackComponent,
-    RegisterFormsComponent
+    RegisterFormsComponent,
+    RLoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   //Declaring a Service at module level
   //providers:[StackService]
   providers: [],
-  bootstrap: [RegisterFormsComponent, StackComponent, UseStackComponent, HelloComponent, PersonsComponent,ProductsListComponent, PipesDemoComponent]
+  bootstrap: [RLoginComponent, RegisterFormsComponent, StackComponent, UseStackComponent, HelloComponent, PersonsComponent,ProductsListComponent, PipesDemoComponent]
 
 })
 export class AppModule { }
