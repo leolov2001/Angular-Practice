@@ -37,10 +37,11 @@ import { RLoginComponent } from './register-forms/rlogin.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  //Declaring a Service at module level
-  //providers:[StackService]
+  // Declaring a Service at module level
+  // providers:[StackService]
   providers: [],
-  bootstrap: [RLoginComponent, RegisterFormsComponent, StackComponent, UseStackComponent, HelloComponent, PersonsComponent,ProductsListComponent, PipesDemoComponent]
+  bootstrap: [RLoginComponent, RegisterFormsComponent, StackComponent, UseStackComponent,
+     HelloComponent, PersonsComponent, ProductsListComponent, PipesDemoComponent]
 
 })
 export class AppModule { }

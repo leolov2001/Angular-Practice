@@ -2,7 +2,7 @@
 <style>
    input.ng-invalid { color :red}
 </style>
-<h1>Reactive Login </h1>
+<h1>Reactive Login V2 - only display errors on submitted</h1>
 
 <form [formGroup]="loginForm"  novalidate>
     Username <br/>
@@ -10,7 +10,7 @@
     <span *ngIf="submitted && loginForm.controls.username.errors?.required">
            Username must be entered!
     </span>
-    <span *ngIf="submitted && loginForm.controls.username.errors?.minlength">
+    <span *ngIf="submitted && loginForm.controls.username.errors?.minlength(4)">
        Username must be atleast 4 chars
     </span>
     <p></p>
